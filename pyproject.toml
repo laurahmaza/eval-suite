@@ -1,0 +1,21 @@
+[project]
+name = "eval-suite"
+version = "0.1.0"
+description = "Evaluation suite for rag-compliance: golden set, rubric, human labels, LLM-as-judge."
+requires-python = ">=3.10"
+dependencies = [
+    "rag-compliance @ git+https://github.com/laurahmaza/rag-compliance.git@main",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = []
